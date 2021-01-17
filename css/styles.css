@@ -17,7 +17,7 @@ html {
 body {
     background-color: var(--whiteBg);
     font-size: 16px;
-    line-height: 1.5px;
+    /* line-height: 1.5px; */
     font-family: var(--primaryFont);
 }
 p {
@@ -60,21 +60,49 @@ h3 {
 /* --------------Navigation----------------- */
 .navigation{
     background-color: var(--blueDark);
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    /* gap: 2rem; */
 }
 .navigation__link{
     text-transform: uppercase;
     color: var(--whiteBg);
     font-weight: 700;
     font-size: 1.8rem;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+}
+.navigation__link:last-of-type {
+    margin-right: 0;
 }
 .navigation__link--active,
 .navigation__link:hover {
     color: var(--greenDark);
 }
+.icon {
+    margin-right: .5rem;
+}
+
+/* --------------Products----------------- */
+.product {
+
+}
+.product__image{
+
+}
+.product__info {
+
+}
+.product__name{
+
+}
+.product__price {
+    
+}
+
 
 /* --------------Footer----------------- */
 .footer{
