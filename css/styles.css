@@ -17,7 +17,7 @@ html {
 body {
     background-color: var(--whiteBg);
     font-size: 16px;
-    /* line-height: 1.5px; */
+    line-height: 1.5px;
     font-family: var(--primaryFont);
 }
 p {
@@ -27,9 +27,6 @@ p {
 a {
     text-decoration: none;
 }
-img {
-    max-width: 100%;
-}
 .container {
     max-width: 120rem;
     margin: 0 auto;
@@ -38,14 +35,17 @@ h1,h2,h3 {
     text-align: center;
     color: var(--blueDark);
 }
-h1 {
-    font-size: 4rem;
+h1{
+    font-size: 2rem;
 }
 h2 {
     font-size: 3.2rem;
 }
 h3 {
     font-size: 2.4rem;
+}
+img {
+    max-width: 100%;
 }
 
 /* --------------Header----------------- */
@@ -54,56 +54,142 @@ h3 {
     justify-content: center;
 }
 .header__logo{
-    margin: 3rem 0;
+    display: block;
+    margin: 3rem auto;
+    max-width: 60%;
+}
+
+@media (min-width: 768px) { 
+    .header__logo {
+        max-width: 100%;
+    }
 }
 
 /* --------------Navigation----------------- */
 .navigation{
     background-color: var(--blueDark);
-    padding: 1rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* gap: 2rem; */
 }
-.navigation__link{
+.navigation__link,
+.navigation__link--shrink{
     text-transform: uppercase;
     color: var(--whiteBg);
     font-weight: 700;
     font-size: 1.8rem;
-    margin-right: 2rem;
-    display: flex;
-    align-items: center;
+    display: block;
+    padding: 2.5rem;
+    border-top: 1px solid #576979;
 }
-.navigation__link:last-of-type {
-    margin-right: 0;
+.navigation__container {
+    display: none;
+}
+
+.navigation__link--shrink {
+    width: 100%;
+    position: relative;
+}
+.navigation__link--shrink:after {
+    content:"";
+    background: url('http://media02.hongkiat.com/responsive-web-nav/demo/nav-icon.png') no-repeat;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    position: absolute;
+    right: 1.5rem;
+    top: 13.5rem;
 }
 .navigation__link--active,
 .navigation__link:hover {
     color: var(--greenDark);
 }
 .icon {
-    margin-right: .5rem;
+    display: none;
+}
+.navigation__link:last-of-type{
+    margin-right: 0;
+}
+
+@media (max-width: 359px) { 
+    .navigation__link--shrink:after {
+        top: 13.5rem;
+    }
+}
+
+@media (min-width: 768px) { 
+    
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 2rem;
+    }
+    .navigation__container {
+        display: flex;
+    }
+    .navigation__link--shrink {
+        display: none;
+    }
+    .navigation__link {
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        border-top: 0;
+    }
+    .icon {
+        display: inline;
+        margin-right: .5rem;
+    } 
+}
+
+/* --------------Grid----------------- */
+
+@media (min-width: 411px) { 
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) { 
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 }
 
 /* --------------Products----------------- */
+h1 {
+    margin: 4rem 0;
+}
 .product {
-
+    background-color: var(--blueDark);
+    padding: 1rem;
 }
 .product__image{
-
+    width: 100%;
 }
 .product__info {
 
 }
 .product__name{
-
+    font-size: 2rem;
 }
 .product__price {
-    
+    font-size: 1.6rem;
 }
 
-
+@media (min-width: 411px) { 
+    h1{
+        font-size: 3rem;
+    }
+}
+@media (min-width: 768px) { 
+    h1 {
+        font-size: 4rem;
+    }
+}
 /* --------------Footer----------------- */
 .footer{
     background-color: var(--dark);
@@ -112,5 +198,7 @@ h3 {
 }
 .footer__texto{
     color: var(--whiteBg);
+    text-align: center;
+    font-size: 1rem;
     font-weight: 200;
 }

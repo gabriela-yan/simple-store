@@ -19,30 +19,33 @@
     <!-- End header -->
     <!-- Navigation -->
     <nav class="navigation">
-        <a class="navigation__link navigation__link--active" href="index.html">Tienda</a>
-        <a class="navigation__link" href="#">Categorías</a>
-        <a class="navigation__link" href="about.html">Nosotros</a>
-        <a class="navigation__link" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#f0efef" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <circle cx="12" cy="7" r="4" />
-                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-              </svg>
-              <span class="navigation__text">Mi cuenta</span>
-        </a>
-        <a class="navigation__link" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#f0efef" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <circle cx="9" cy="19" r="2" />
-                <circle cx="17" cy="19" r="2" />
-                <path d="M3 3h2l2 12a3 3 0 0 0 3 2h7a3 3 0 0 0 3 -2l1 -7h-15.2" />
-            </svg>
-            <span class="navigation__text">Carrito</span> 
-        </a>
+        <!-- Menu Responsive -->
+        <a class="navigation__link--shrink" id="menuLink" href="#">Menu</a>
+        <div class="navigation__container" id="menu">
+            <a class="navigation__link navigation__link--active" href="index.html">Tienda</a>
+            <a class="navigation__link" href="about.html">Nosotros</a>
+            <a class="navigation__link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#f0efef" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                  </svg>
+                  <span class="navigation__text">Mi cuenta</span>
+            </a>
+            <a class="navigation__link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#f0efef" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="9" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M3 3h2l2 12a3 3 0 0 0 3 2h7a3 3 0 0 0 3 -2l1 -7h-15.2" />
+                </svg>
+                <span class="navigation__text">Carrito</span> 
+            </a>
+        </div>
     </nav>
     <!-- End navigation -->
     <!-- Main -->
-    <main>
+    <main class="container">
         <h1>Nuestros productos</h1>
         <div class="grid">
             <!-- Product -->
@@ -207,5 +210,7 @@
         <p class="footer__texto">2021 Frontend Store - Todos los derechos reservados.</p>
     </footer>
     <!-- End footer -->
+
+    <script src="js/main.js"></script>
 </body>
 </html>
