@@ -45,7 +45,7 @@ h3{
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
 /* --------------Header----------------- */
@@ -167,9 +167,6 @@ h1 {
     background-color: var(--blueDark);
     padding: 1rem;
 }
-.product__image{
-    width: 100%;
-}
 .product__name{
     text-transform: uppercase;
     font-size: 2rem;
@@ -185,6 +182,36 @@ h1 {
     margin: 2rem 0;
     text-align: center;
     line-height: 1.2;
+}
+/* --------------Page Product----------------- */
+
+.form{
+
+}
+.form__field{
+
+}
+.form__button{
+    background-color: var(--greenLight);
+    border: none;
+    font-size: 2rem;
+    padding: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+    transition: all .5s ease;
+}
+.form__button:hover {
+    background-color: var(--dark);
+    color: var(--whiteBg);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) { 
+    .t-shirt {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
 }
 
 /* --------------Graphics----------------- */
@@ -240,7 +267,6 @@ h1 {
 }
 .about__image {
     grid-row: 1 / 2;
-    width: 100%;
 }
 
 @media (min-width: 768px) { 
@@ -278,9 +304,6 @@ h1 {
 
 .block {
     text-align: center;
-}
-.block__image {
-    width: 100%;
 }
 @media (min-width: 411px) { 
     .shop {

@@ -19,16 +19,51 @@
     <!-- End header -->
     <!-- Navigation -->
     <nav class="navigation">
-        <a class="navigation__link navigation__link--active" href="index.html">Tienda</a>
-        <a class="navigation__link" href="#">Categorías</a>
-        <a class="navigation__link" href="about.html">Nosotros</a>
-        <a class="navigation__link" href="#">Mi cuenta</a>
-        <a class="navigation__link" href="#">Carrito</a>
+        <!-- Menu Responsive -->
+        <a class="navigation__link--shrink" id="menuLink" href="#">Menu</a>
+        <div class="navigation__container" id="menu">
+            <a class="navigation__link" href="index.html">Tienda</a>
+            <a class="navigation__link navigation__link--active" href="about.html">Nosotros</a>
+            <a class="navigation__link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#f0efef" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                    </svg>
+                    <span class="navigation__text">Mi cuenta</span>
+            </a>
+            <a class="navigation__link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#f0efef" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="9" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M3 3h2l2 12a3 3 0 0 0 3 2h7a3 3 0 0 0 3 -2l1 -7h-15.2" />
+                </svg>
+                <span class="navigation__text">Carrito</span> 
+            </a>
+        </div>
     </nav>
     <!-- End navigation -->
     <!-- Main -->
-    <main>
-        <h1>Producto</h1>
+    <main class="container">
+        <h1>React JS</h1>
+        <div class="t-shirt">
+            <img src="assets/img/3.jpg" alt="T-shrit ReactJS" class="t-shirt__image">
+
+            <div class="t-shirt__content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, aspernatur. Repellendus, sed eveniet. Vel magnam omnis nisi praesentium? Consectetur quidem id necessitatibus provident dicta temporibus ducimus expedita vitae nulla officiis!</p>
+                <form class="form">
+                    <select name="" id="" class="form__field">
+                        <option disabled selected>-- Seleccionar Talla --</option>
+                        <option value="small">Chica</option>
+                        <option value="medium">Mediana</option>
+                        <option value="large">Grande</option>
+                    </select>
+                    <input class="form__field" type="number" placeholder="Cantidad" min="1">
+                    <input class="form__button" type="submit" value="Agregar al carrito">
+                </form>
+            </div>
+        </div>
     </main>
     <!-- End main -->
     <!-- Footer -->
@@ -36,5 +71,6 @@
         <p class="footer__texto">2021 Frontend Store - Todos los derechos reservados.</p>
     </footer>
     <!-- End footer -->
+    <script src="js/main.js"></script>
 </body>
 </html>
