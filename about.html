@@ -19,22 +19,77 @@
     <!-- End header -->
     <!-- Navigation -->
     <nav class="navigation">
-        <a class="navigation__link" href="index.html">Tienda</a>
-        <a class="navigation__link" href="#">Categorías</a>
-        <a class="navigation__link navigation__link--active" href="about.html">Nosotros</a>
-        <a class="navigation__link" href="#">Mi cuenta</a>
-        <a class="navigation__link" href="#">Carrito</a>
+        <!-- Menu Responsive -->
+        <a class="navigation__link--shrink" id="menuLink" href="#">Menu</a>
+        <div class="navigation__container" id="menu">
+            <a class="navigation__link" href="index.html">Tienda</a>
+            <a class="navigation__link navigation__link--active" href="about.html">Nosotros</a>
+            <a class="navigation__link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#f0efef" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                  </svg>
+                  <span class="navigation__text">Mi cuenta</span>
+            </a>
+            <a class="navigation__link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#f0efef" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="9" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M3 3h2l2 12a3 3 0 0 0 3 2h7a3 3 0 0 0 3 -2l1 -7h-15.2" />
+                </svg>
+                <span class="navigation__text">Carrito</span> 
+            </a>
+        </div>
     </nav>
     <!-- End navigation -->
     <!-- Main -->
-    <main>
-        <h1>Nosotros</h1>
+    <main class="container">
+        <h1>Sobre Nosotros</h1>
+        <div class="about">
+            <div class="about__content">
+                <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet doloremque beatae, dolore necessitatibus veritatis assumenda corrupti ut quo debitis possimus illo accusantium vitae totam, dolorem asperiores magni id laudantium. Repudiandae.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, sapiente laudantium nihil repellendus fugiat quidem blanditiis ad consectetur. Eveniet sint quo a ex alias eum, ratione eos nemo possimus natus.</p>
+                <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit excepturi libero recusandae molestias eaque. Libero suscipit totam repellat quisquam velit quae voluptates sit atque molestiae. Voluptates at sapiente et!</p>
+            </div>
+            <img src="assets/img/nosotros.jpg" alt="About image" class="about__image">
+        </div>
     </main>
     <!-- End main -->
+    <!-- Section -->
+    <section class="container shop">
+        <h2 class="shop__title">¿Porqué comprar con nosotros?</h2>
+        <div class="blocks">
+            <div class="block">
+                <img class="block__image" src="assets/img/icono_1.png" alt="Why shop?">
+                <h3 class="block__title">El mejor precio</h3>
+                <p class="block__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit excepturi libero recusandae molestias eaque.</p>
+            </div>
+            <div class="block">
+                <img class="block__image" src="assets/img/icono_2.png" alt="For Devs">
+                <h3 class="block__title">Para Devs</h3>
+                <p class="block__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit excepturi libero recusandae molestias eaque.</p>
+            </div>
+            <div class="block">
+                <img class="block__image" src="assets/img/icono_3.png" alt="Free shipping">
+                <h3 class="block__title">Envió gratis</h3>
+                <p class="block__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit excepturi libero recusandae molestias eaque.</p>
+            </div>
+            <div class="block">
+                <img class="block__image" src="assets/img/icono_4.png" alt="The best quality">
+                <h3 class="block__title">La mejor calidad</h3>
+                <p class="block__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit excepturi libero recusandae molestias eaque.</p>
+            </div>
+        </div>
+    </section>
+    <!-- End section -->
     <!-- Footer -->
     <footer class="footer">
         <p class="footer__texto">2021 Frontend Store - Todos los derechos reservados.</p>
     </footer>
     <!-- End footer -->
+
+    <script src="js/main.js"></script>
 </body>
 </html>
